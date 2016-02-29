@@ -1,70 +1,277 @@
 @import "compass";
-html {-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS while allowing user zoom */}
-body {background-color:#34495e; background-position:top center; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;}
-#occlogo {text-indent:-1000em;} /* so no one can click on the logo link by accident */
-.ie8 #peoplesearchbox, .ie7 #peoplesearchbox {border-width:1px; font-size:.8em;}
+html {
+	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape on iOS while allowing user zoom */
+}
+body {
+	background-color: #34495e;
+	background-position: top center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#occlogo {
+	text-indent: -1000em;
+}
+/* so no one can click on the logo link by accident */
+.ie8 #peoplesearchbox, .ie7 #peoplesearchbox {
+	border-width: 1px;
+	font-size: .8em;
+}
 
-.homebutton {color:#008bc0; display:inline-block; margin:.7em 0 0 16em; font-size:1.2em;}
-.header .homebutton:hover {background:none;}
-#home .homebutton {display:none;}  
-.header .formbox {float:right;}
+.homebutton {
+	color: #008bc0;
+	display: inline-block;
+	margin: .7em 0 0 16em;
+	font-size: 1.2em;
+	text-decoration:none;
+}
+.header .homebutton:hover {
+	background: none;
+}
+#home .homebutton {
+	display: none;
+}
+.header .formbox {
+	float: right;
+}
 .ie7 .header .formbox, .ie8 .header .formbox {
-  width:350px;
+	width: 350px;
 }
 .ie7 .header .searchbox, .ie8 .header .searchbox {
-  width:250px;
+	width: 250px;
 }
-.main {background:none; margin-top:-1px;}
-#index .main {background:#FFF; box-shadow:0 0 20px rgba(0,0,0,.65);}
-
-.sitetitle {margin:2em 0 0 .25em; color:#FFF; font-size:2.2em; text-shadow:0 1px 2px rgba(0,0,0,.5);}
-#menutitle {color:#FFF; text-shadow:0 1px 2px rgba(0,0,0,.5); font-size:2em; margin-top:1em;}
-
-.toolbar {width:660px; margin:2em 0 0 0; float:left; margin-bottom:2em; background:#000; border-bottom:1px solid #FFF; box-shadow:0 1px 3px rgba(0,0,0,.65);}
-  .toolbar ul {list-style:none; padding:0; margin:0; width:260px; font-size:.965em; float:left;}
-  .toolbar .annotated {width:400px;}
-  .annotated span {display:block; font-style:italic; color:#ddd; color:rgba(255,255,255,.65); line-height:1.2; letter-spacing:0.5px; margin-top:-6px;}
-  .toolbar li {margin:0; padding:0; line-height:1.75;}
-  .toolbar a {color:#fff; background:#000; padding:.25em .5em .25em .5em; display:block; border:1px solid #FFF; border-color:rgba(255,255,255,.4); border-width:0 0 1px 0;}
-  .toolbar a:hover {background:#555; text-decoration:none;}
-  .toolbar .annotated a {background:#008bc0;}
-  .toolbar .annotated a:hover {background:#047199;}
-
-  .peoplesearch {background:#FFF; float:left; width:260px;}
-  .peoplesearch form {height:35px;}
-  .peoplesearch .submitbutton {display:inline-block; width:32px; height:32px; text-indent:-1000em; border:0; background:transparent url(../images/icon-search-blue.svg) no-repeat center center; margin-top:3px; background-size:20px;}
-  .ie8 .peoplesearch .submitbutton, .ie7 .peoplesearch .submitbutton {text-indent:0; background:none;}
-  #peoplesearchbox {float:left; width:200px; font-family:open sans, verdana; font-weight:200;font-size:.9em; border:0; color:#008bc0; margin:.25em 0 0 0; padding-left:.75em;}
-  .peoplesearch a {font-size:.965em; display:block; color:#008bc0; line-height:1.75; padding:.25em .5em .25em .5em; background:#FFF; border:1px solid #000; border-color:rgba(0,0,0,.2); border-width:1px 0 1px 0; text-decoration:none;}
-  .peoplesearch a:hover {background:#FFF; color:#000; text-decoration:none;}
-
-.needtoknow {float:left; margin:0 0 0 10px;}
-.needtoknow h4 {color:#FFF; margin-bottom:.5em; font-weight:200;}
-.needtoknow ul {list-style:none; padding:0;}
-.needtoknow .button {text-align:left;}
-
-.news p a, .events p a {color:#222; display:block; padding:.25em; line-height:1.2;}
-.news p a:hover, .events p a:hover {text-decoration:none; background:#dcf5ff;}
-
-@media all and (max-width:970px){
-  .header .homebutton {margin:0 0 0 1em;}
-  .header .formbox {margin:0 0 0 1em; display:inline-block; float:none; width:auto;}
-  #home .header .formbox {top:0; margin-bottom:1.5em;}
-  .toolbar {width:100%;}
-  .toolbar ul, .toolbar .annotated, .toolbar .peoplesearch {width:50%;}
-  .needtoknow li {display:inline-block;}
-  #section, #section.hasmenu {padding:.5em; width:96%;}
-  #home .header .push-menu-opener {display:none;} /* desktop layout works fine for tablet size, so don't show the menu opener */
+.follow-me.bottom-right.below {
+	text-decoration:none;
+	line-height:1.2;
+	bottom:25%;
+}
+.follow-me:hover {
+	text-decoration:underline;
+}
+.bottom-left {
+	border-radius: 0 .5em .5em 0;
+}
+.bottom-right {
+	border-radius: .5em 0 0 .5em;
 }
 
-@media all and (max-width:595px){
-  .header .formbox {margin-bottom:1.5em; width:100%;}
-  .toolbar ul, .peoplesearch, .needtoknow {font-size:1.1em;}
-  .toolbar ul, .toolbar .annotated, .toolbar .peoplesearch {display:block; width:100%;}
-  .toolbar li {line-height:2.25;}
-  .peoplesearch a {margin-top:.25em;}
-  #peoplesearchbox {width:70%;}
-  /* reveal the menu-opener */
-  #home .header .push-menu-opener {display:inline-block;}
-  #home #occlogo {margin-left:0;}
+.main {
+	background: none;
+	margin-top: -1px;
+}
+#index .main {
+	background: #FFF;
+	box-shadow: 0 0 20px rgba(0,0,0,.65);
+}
+
+.sitetitle {
+	margin: 2em 0 0 .25em;
+	color: #FFF;
+	font-size: 2.2em;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+#menutitle {
+	color: #FFF;
+	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+	font-size: 2em;
+	margin-top: 1em;
+}
+
+.toolbar {
+	width: 660px;
+	margin: 2em 0 0 0;
+	float: left;
+	margin-bottom: 2em;
+	background: #000;
+	border-bottom: 1px solid #FFF;
+	box-shadow: 0 1px 3px rgba(0,0,0,.65);
+}
+.toolbar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 260px;
+	font-size: .965em;
+	float: left;
+}
+.toolbar .annotated {
+	width: 400px;
+}
+.annotated span {
+	display: block;
+	font-style: italic;
+	color: #ddd;
+	color: rgba(255,255,255,.65);
+	line-height: 1.2;
+	letter-spacing: 0.5px;
+	margin-top: -6px;
+}
+.toolbar li {
+	margin: 0;
+	padding: 0;
+	line-height: 1.75;
+}
+.toolbar a {
+	color: #fff;
+	background: #000;
+	padding: .25em .5em .25em .5em;
+	display: block;
+	border: 1px solid #FFF;
+	border-color: rgba(255,255,255,.4);
+	border-width: 0 0 1px 0;
+	text-decoration:none;
+}
+.toolbar a:hover {
+	background: #555;
+	text-decoration: none;
+}
+.toolbar .annotated a {
+	background: #008bc0;
+}
+.toolbar .annotated a:hover {
+	background: #047199;
+}
+
+.peoplesearch {
+	background: #FFF;
+	float: left;
+	width: 260px;
+}
+.peoplesearch form {
+	height: 35px;
+}
+.peoplesearch .submitbutton {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	text-indent: -1000em;
+	border: 0;
+	background: transparent url(../images/icon-search-blue.svg) no-repeat center center;
+	margin-top: 3px;
+	background-size: 20px;
+}
+.ie8 .peoplesearch .submitbutton, .ie7 .peoplesearch .submitbutton {
+	text-indent: 0;
+	background: none;
+}
+#peoplesearchbox {
+	float: left;
+	width: 200px;
+	font-family: open sans, verdana;
+	font-weight: 200;
+	font-size: .9em;
+	border: 0;
+	color: #008bc0;
+	margin: .25em 0 0 0;
+	padding-left: .75em;
+}
+.peoplesearch a {
+	font-size: .965em;
+	display: block;
+	color: #008bc0;
+	line-height: 1.75;
+	padding: .25em .5em .25em .5em;
+	background: #FFF;
+	border: 1px solid #000;
+	border-color: rgba(0,0,0,.2);
+	border-width: 1px 0 1px 0;
+	text-decoration: none;
+}
+.peoplesearch a:hover {
+	background: #FFF;
+	color: #000;
+	text-decoration: none;
+}
+
+.needtoknow {
+	float: left;
+	margin: 0 0 0 10px;
+}
+.needtoknow h4 {
+	color: #FFF;
+	margin-bottom: .5em;
+	font-weight: 200;
+}
+.needtoknow ul {
+	list-style: none;
+	padding: 0;
+}
+.needtoknow .button {
+	text-align: left;
+}
+
+.news p a, .events p a {
+	color: #222;
+	display: block;
+	padding: .25em;
+	line-height: 1.2;
+	text-decoration:none;
+}
+.news p a:hover, .events p a:hover {
+	text-decoration: none;
+	background: #dcf5ff;
+}
+
+@media all and (max-width:970px) {
+	.header .homebutton {
+		margin: 0 0 0 1em;
+	}
+	.header .formbox {
+		margin: 0 0 0 1em;
+		display: inline-block;
+		float: none;
+		width: auto;
+	}
+	#home .header .formbox {
+		top: 0;
+		margin-bottom: 1.5em;
+	}
+	.toolbar {
+		width: 100%;
+	}
+	.toolbar ul, .toolbar .annotated, .toolbar .peoplesearch {
+		width: 50%;
+	}
+	.needtoknow li {
+		display: inline-block;
+	}
+	#section, #section.hasmenu {
+		padding: .5em;
+		width: 96%;
+	}
+	#home .header .push-menu-opener {
+		display: none;
+	}
+	/* desktop layout works fine for tablet size, so don't show the menu opener */
+}
+
+@media all and (max-width:595px) {
+	.header .formbox {
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+	.toolbar ul, .peoplesearch, .needtoknow {
+		font-size: 1.1em;
+	}
+	.toolbar ul, .toolbar .annotated, .toolbar .peoplesearch {
+		display: block;
+		width: 100%;
+	}
+	.toolbar li {
+		line-height: 2.25;
+	}
+	.peoplesearch a {
+		margin-top: .25em;
+	}
+	#peoplesearchbox {
+		width: 70%;
+	}
+	/* reveal the menu-opener */
+	#home .header .push-menu-opener {
+		display: inline-block;
+	}
+	#home #occlogo {
+		margin-left: 0;
+	}
+
 }
